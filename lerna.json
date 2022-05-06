@@ -1,0 +1,21 @@
+{
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "publish": {
+      "ignoreChanges": [
+        "apps/*",
+        "examples/*",
+        "features/*"
+      ],
+      "message": "chore(release): publish"
+    }
+  },
+  "packages": [
+    "apps/*",
+    "examples/*",
+    "features/*",
+    "packages/*"
+  ]
+}
