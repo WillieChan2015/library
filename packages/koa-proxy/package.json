@@ -1,5 +1,5 @@
 {
-  "name": "koa-proxy",
+  "name": "@williechen/koa-proxy",
   "version": "0.0.1",
   "jsnext:source": "./src/index.ts",
   "types": "./dist/types/index.d.ts",
@@ -23,6 +23,11 @@
     "dist",
     "README.md"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:WillieChan2015/library.git",
+    "directory": "packages/koa-proxy"
+  },
   "dependencies": {
     "koa-better-http-proxy": "^0.2.10",
     "path-to-regexp": "^6.2.1"
