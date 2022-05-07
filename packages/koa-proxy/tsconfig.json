@@ -1,0 +1,20 @@
+{
+  "extends": "@modern-js/tsconfig/base",
+  "compilerOptions": {
+    "declaration": false,
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "charset": "utf8",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@style/*": ["./styles/*"]
+    }
+  },
+  "include": ["src"]
+}
