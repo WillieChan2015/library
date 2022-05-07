@@ -16,7 +16,7 @@ koa 代理/转发插件
 ```js
 const Koa = require('koa');
 const bodyparser = require('koa-body');
-const { proxy, proxyMiddleware } = require('@web/koa-proxy');
+const { proxy, proxyMiddleware } = require('@williechen/koa-proxy');
 
 const app = new Koa();
 
