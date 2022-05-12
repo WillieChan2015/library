@@ -24,10 +24,15 @@ export function proxy(options: ProxyOptions) {
 export function proxyMiddleware(options: IProxyMiddlewareOpts) {
   const { target = {} } = options;
 
+  const routeRegArr: [RegExp, string][] = [];
+  for (const route of Object.keys(target)) {
+    routeRegArr.push([pathToRegexp(route), route]);
+  }
+
   return async (ctx: Context, next: Next) => {
     const { path } = ctx;
-    for (const route of Object.keys(target)) {
-      if (pathToRegexp(route).test(path)) {
+    for (const [reg, route] of routeRegArr) {
+      if (reg.test(path)) {
         const opts = target[route];
         return proxy(opts)(ctx, next);
       }

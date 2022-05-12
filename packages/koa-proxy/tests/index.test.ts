@@ -5,3 +5,5 @@ describe('Default cases', () => {
     expect(drink).toHaveReturned();
   });
 });
+
+export {}
